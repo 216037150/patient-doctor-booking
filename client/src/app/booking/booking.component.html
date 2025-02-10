@@ -1,0 +1,19 @@
+<h2>Make a Booking</h2>
+<form (ngSubmit)="submitBooking()" #bookingForm="ngForm">
+    <label for="name">Name:</label>
+    <input type="text" id="name" [(ngModel)]="booking.name" name="name" required />
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" [(ngModel)]="booking.email" name="email" required />
+
+    <label for="phone">Phone Number:</label>
+    <input type="tel" id="phone" [(ngModel)]="booking.phone" name="phone" required />
+
+    <label for="date">Booking Date:</label>
+    <input type="date" id="date" [(ngModel)]="booking.date" name="date" required />
+
+    <label for="time">Time:</label>
+    <input type="time" id="time" [(ngModel)]="booking.time" name="time" required />
+
+    <button type="submit" [disabled]="!bookingForm.form.valid">Submit</button>
+</form>

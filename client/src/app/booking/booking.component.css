@@ -1,0 +1,58 @@
+/* Center the form */
+form {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style the labels */
+label {
+    display: block;
+    font-weight: bold;
+    margin: 10px 0 5px;
+}
+
+/* Style input fields */
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Button Styling */
+button {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    color: white;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+/* Disable button style */
+button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+/* Hover effect */
+button:hover:not(:disabled) {
+    background: #0056b3;
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+    form {
+        width: 90%;
+        padding: 15px;
+    }
+}
