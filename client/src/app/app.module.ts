@@ -1,17 +1,17 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
+// Don't declare the components here. Only import AppComponent.
 import { AppComponent } from './app.component';
-import { BookingComponent } from './booking/booking.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+
+
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    BookingComponent
-  ],
+  declarations: [],
   imports: [
     BrowserModule,
-    HttpClientModule
+    AppComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

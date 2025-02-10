@@ -1,10 +1,14 @@
 import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 import { BookingService } from '../booking.service';
 
 @Component({
   selector: 'app-booking',
+  standalone: true,
+  imports: [FormsModule, HttpClientModule],
   templateUrl: './booking.component.html',
-  styleUrls: ['./booking.component.css'],
+  styleUrls: ['./booking.component.css']
 })
 export class BookingComponent {
   booking = { name: '', email: '', phone: '', date: '', time: '' };
@@ -12,14 +16,8 @@ export class BookingComponent {
   constructor(private bookingService: BookingService) { }
 
   submitBooking() {
-    this.bookingService.createBooking(this.booking).subscribe(
-      (response) => {
-        alert('Booking successful!');
-      },
-      (error) => {
-        alert('An error occurred while making the booking.');
-        console.error('Booking error:', error);
-      }
-    );
+    this.bookingService.createBooking(this.booking).subscribe(response => {
+      alert('Booking successful!');
+    });
   }
 }
